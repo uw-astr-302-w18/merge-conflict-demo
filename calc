@@ -2,6 +2,12 @@
 
 import sys
 
+def add(args):
+	res = 0.0
+	for arg in args:
+		res += arg
+	return res
+
 def mul(args):
 	prod = 1.0
 	for arg in args:
@@ -9,7 +15,8 @@ def mul(args):
 	return prod
 
 operators = {
-	'mul': mul
+	'mul': mul,
+	'add': add
 }
 
 if __name__ == "__main__":
