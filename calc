@@ -8,9 +8,7 @@ def mul(args):
 		prod *= arg
 	return prod
 
-operators = {
-	'mul': mul
-}
+operators = dict(mul=mul)
 
 if __name__ == "__main__":
 	op = sys.argv[1]
