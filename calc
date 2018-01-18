@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+
+import sys
+
+def mul(args):
+	prod = 1.0
+	for arg in args:
+		prod *= arg
+	return prod
+
+operators = {
+	'mul': mul
+}
+
+if __name__ == "__main__":
+	op = sys.argv[1]
+	args = [ float(arg) for arg in sys.argv[2:] ]
+	print(operators[op](args))
